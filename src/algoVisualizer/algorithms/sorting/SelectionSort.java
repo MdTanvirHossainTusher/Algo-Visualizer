@@ -1,9 +1,12 @@
 package algoVisualizer.algorithms.sorting;
 
+import algoVisualizer.utils.DelayUtils;
+import algoVisualizer.utils.UpdateUtils;
+
 public class SelectionSort {
 
-//    private int check=-1;
-    public void selectionSort(int arr[], int len, boolean sorting, int check){
+    private int check=-1;
+    public void selectionSort(int arr[], int len, boolean sorting){
 
         for(int i=0;i<len && sorting;i++){
             int item=i;
@@ -14,8 +17,8 @@ public class SelectionSort {
                     item=j;
                 }
                 check=j;
-                update();
-                delay();
+                UpdateUtils.update();
+                DelayUtils.delay();
             }
             if(i!=item){
                 int tmp = arr[i];

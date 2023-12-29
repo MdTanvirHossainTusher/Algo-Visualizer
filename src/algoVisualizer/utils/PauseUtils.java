@@ -6,7 +6,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class PauseUtils {
-    public void pause(boolean sorting){
+    public static void pause(boolean sorting){
         int i=0;
         while(!sorting){
             i++;

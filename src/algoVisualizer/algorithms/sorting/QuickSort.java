@@ -1,7 +1,12 @@
 package algoVisualizer.algorithms.sorting;
 
+import algoVisualizer.utils.DelayUtils;
+import algoVisualizer.utils.UpdateUtils;
+
 public class QuickSort {
-    public int partition(int arr[], int low,int high, int check){
+    private int check = -1;
+
+    public int partition(int arr[], int low,int high){
 
         int pivot=arr[high];
         int i=low-1;
@@ -13,16 +18,16 @@ public class QuickSort {
                 arr[i] = arr[j];
                 arr[j] = tmp;
             }
-            update();
-            delay();
+            UpdateUtils.update();
+            DelayUtils.delay();
         }
 
         int tmp = arr[i+1];
         arr[i+1] = arr[high];
         arr[high] = tmp;
 
-        update();
-        delay();
+        UpdateUtils.update();
+        DelayUtils.delay();
 
         return (i+1);
     }

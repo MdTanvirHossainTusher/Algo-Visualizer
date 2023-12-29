@@ -1,5 +1,8 @@
 package algoVisualizer.algorithms.sorting;
 
+import algoVisualizer.utils.DelayUtils;
+import algoVisualizer.utils.UpdateUtils;
+
 public class BubbleSort {
 
     public void bubbleSort(int arr[], int len, boolean sorting, int check){
@@ -20,8 +23,8 @@ public class BubbleSort {
 
                 }
                 check=j+1;
-                update();
-                delay();
+                UpdateUtils.update();
+                DelayUtils.delay();
             }
             i++;
         }

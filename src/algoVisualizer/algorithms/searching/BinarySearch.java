@@ -1,10 +1,13 @@
 package algoVisualizer.algorithms.searching;
 
+import algoVisualizer.utils.DelayUtils;
+import algoVisualizer.utils.UpdateUtils;
 import algorithmvisualizer.Visualization;
 
 import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 
 public class BinarySearch {
     private boolean found = false;
@@ -35,8 +38,8 @@ public class BinarySearch {
                 low=mid+1;
             }
             check=mid;
-            update();
-            delay();
+            UpdateUtils.update();
+            DelayUtils.delay();
         }
         if(!found){
             System.out.println("Key not found");

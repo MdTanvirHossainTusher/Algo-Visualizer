@@ -1,5 +1,8 @@
 package algoVisualizer.algorithms.searching;
 
+import algoVisualizer.utils.DelayUtils;
+import algoVisualizer.utils.UpdateUtils;
+
 public class LinearSearch {
 
     private int currentKey = -1;
@@ -23,8 +26,8 @@ public class LinearSearch {
                 got=false;
             }
             check=i;
-            update();
-            delay();
+            UpdateUtils.update();
+            DelayUtils.delay();
         }
     }
 }
