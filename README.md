@@ -27,6 +27,16 @@ User can generate the array and can also manually input the array. Other functio
 8. User can input the array manually in the `Insert Data` field. For the simplicity, negetive values are not allowed
 9. Last data will be the key of an array
 
+# User Interface
+
+`Merge Sort` process for the randomly generated array.
+
+<img src="images/randomArray.PNG" alt="daily dump" style="width:700px;height:500px;"></br></br>
+
+`Binary Search` process for the manually inserted data.
+
+<img src="images/manualArray.PNG" alt="date option" style="width:700px;height:500px;"></br></br>
+
 # Build and Run
 
 Follow the given steps below to run the project-
