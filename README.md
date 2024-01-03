@@ -29,11 +29,11 @@ User can generate the array and can also manually input the array. Other functio
 
 # User Interface
 
-`Merge Sort` process for the randomly generated array.
+1. `Merge Sort` process for the randomly generated array.
 
 <img src="images/randomArray.PNG" alt="daily dump" style="width:750px;height:420px;"></br></br>
 
-`Binary Search` process for the manually inserted data.
+2. `Binary Search` process for the manually inserted data.
 
 <img src="images/manualArray.PNG" alt="date option" style="width:750px;height:420px;"></br></br>
 
