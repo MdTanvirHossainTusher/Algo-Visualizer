@@ -32,7 +32,7 @@ public class CreateArrayUtils {
         return arr;
     }
 
-    public static void createInputArray() {
+    public static int[] createInputArray() {
 
         int newLen = ((currentIndex == 5 || currentIndex == 6) ? len - 1 : len);
         int arr[];
@@ -58,5 +58,6 @@ public class CreateArrayUtils {
         ResetUtils.reset();
         UpdateUtils.update();
 
+        return arr;
     }
 }

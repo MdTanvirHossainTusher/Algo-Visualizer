@@ -67,6 +67,8 @@ public class ControlPanel extends JFrame{
     private JScrollPane complexityScroll = new JScrollPane(complexityField, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
     private JButton creditBtn = new JButton("Credit");
 
+    private int arr[];
+
 //    private Container container = VariablesManager.getContainer();
     public Container controlPanelInitialization(Container container) {
         /* --------------------  Control Panel Start  -------------------- */
@@ -244,9 +246,10 @@ public class ControlPanel extends JFrame{
                 System.out.println(VariablesManager.getArray().length+ "aaaaaaaaaaSSSSSSSSSSSSSSSSS\n");
                 if (VariablesManager.getArray().length != len) {
 //                    shuffleList();
-                    ShuffleListUtils.shuffleList();
+                    arr = ShuffleListUtils.shuffleList();
                 }
 //                reset();
+                VariablesManager.setArray(arr);
                 ResetUtils.reset();
             }
         });
@@ -294,7 +297,9 @@ public class ControlPanel extends JFrame{
 //                shuffleList();
 //                reset();
 
-                ShuffleListUtils.shuffleList();
+                arr = ShuffleListUtils.shuffleList();
+                VariablesManager.setArray(arr);
+
                 ResetUtils.reset();
 
             }

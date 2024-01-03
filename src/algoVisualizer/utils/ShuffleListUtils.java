@@ -51,7 +51,7 @@ public class ShuffleListUtils {
             }
         }
         else{
-            CreateArrayUtils.createInputArray();
+            arr = CreateArrayUtils.createInputArray();
 
             if(currentIndex==5 || currentIndex==6){// search algo
 
