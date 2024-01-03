@@ -184,12 +184,14 @@ public final class Visualization extends JFrame{
         this.setBounds(150,20,1280,720);
         this.setTitle("HT Algorithm Visualizer");
         this.setResizable(false);
-    
-        
-        
+
+
+
         c=getContentPane();
         c.setLayout(null);
         c.setBackground(Color.GRAY);
+
+
    
         
         /* --------------------  Control Panel Start  -------------------- */
@@ -408,7 +410,6 @@ public final class Visualization extends JFrame{
                     //sorting();
                 }
             }
-            
         });
         
         stopBtn.addActionListener(new ActionListener(){

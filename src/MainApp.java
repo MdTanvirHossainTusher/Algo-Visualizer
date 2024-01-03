@@ -1,7 +1,7 @@
 public class MainApp{
     public static void main(String[] args) {
         
-        Visualization vs=new Visualization();
+        Visualization2 vs=new Visualization2();
         vs.initComponents();
     }
 }

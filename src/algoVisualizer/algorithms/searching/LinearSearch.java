@@ -1,31 +1,39 @@
 package algoVisualizer.algorithms.searching;
 
+import algoVisualizer.VariablesManager;
 import algoVisualizer.utils.DelayUtils;
 import algoVisualizer.utils.UpdateUtils;
 
 public class LinearSearch {
 
-    private int currentKey = -1;
-    private boolean got = false;
-    public void linearSearch(int arr[], int len, boolean sorting, int key){
+//    private int currentKey = -1;
+//    private boolean got = false;
+
+    private int arr[] = VariablesManager.getArray();
+
+    public void linearSearch() { // int arr[], int len, boolean sorting, int key
 
 
-
-        for(int i=0;i<len-1 && sorting;i++){
+        for (int i = 0; i < VariablesManager.getLen() - 1 && VariablesManager.isSorting(); i++) {
             //currentKey=i;
-            if(arr[i]==key){
+            if (arr[i] == VariablesManager.getKey()) {
                 //System.out.println("found");
-                currentKey=i;
-                got=true;
+//                currentKey=i;
+//                got=true;
+
+                VariablesManager.setCurrentKey(i);
+                VariablesManager.setGot(true);
 
                 break;
+            } else {
+//                currentKey = i;
+//                got = false;
+
+                VariablesManager.setCurrentKey(i);
+                VariablesManager.setGot(false);
             }
-            else {
-                currentKey=i;
-                //System.out.println("not found");
-                got=false;
-            }
-            check=i;
+//            check = i;
+            VariablesManager.setCheck(i);
             UpdateUtils.update();
             DelayUtils.delay();
         }

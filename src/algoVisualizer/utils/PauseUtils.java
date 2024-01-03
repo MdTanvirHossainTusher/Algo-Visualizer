@@ -1,24 +1,30 @@
 package algoVisualizer.utils;
 
-import algorithmvisualizer.Visualization;
+
+import algoVisualizer.VariablesManager;
+import algoVisualizer.algorithms.SelectAlgo;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class PauseUtils {
-    public static void pause(boolean sorting){
+    private static SelectAlgo selectAlgo = new SelectAlgo();
+    public static void pause(){
         int i=0;
-        while(!sorting){
+//        while(!sorting){
+        boolean isSorting = VariablesManager.isSorting();
+        while(!isSorting){
             i++;
             if(i>100)
                 i=0;
             try {
                 Thread.sleep(0);
             } catch (InterruptedException ex) {
-                Logger.getLogger(Visualization.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(PauseUtils.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         }
-        sorting();
+//        sorting();
+        selectAlgo.sorting();
     }
 }
